@@ -1,0 +1,15 @@
+HOW TO ADD YOUR VALENTINE'S DAY MUSIC:
+========================================
+
+1. Download a Valentine's Day romantic song you like (MP3 format)
+2. Rename it to: valentine-song.mp3
+3. Place it in this 'music' folder
+4. The music will automatically play when you click the music button!
+
+FREE MUSIC RESOURCES:
+- YouTube Audio Library (royalty-free)
+- Free Music Archive
+- Pixabay Music
+- Bensound
+
+Note: Make sure the file is named exactly "valentine-song.mp3"

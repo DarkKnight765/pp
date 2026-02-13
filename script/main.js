@@ -26,6 +26,28 @@ const animationTimeline = () => {
     skewX: "-15deg",
   };
 
+  // Music Control Functionality
+  const bgMusic = document.getElementById("bgMusic");
+  const musicBtn = document.getElementById("musicBtn");
+  const playIcon = document.querySelector(".play-icon");
+  const pauseIcon = document.querySelector(".pause-icon");
+
+  musicBtn.addEventListener("click", () => {
+    if (bgMusic.paused) {
+      bgMusic.play();
+      playIcon.style.display = "none";
+      pauseIcon.style.display = "block";
+      musicBtn.classList.add("playing");
+      musicBtn.title = "Pause Music";
+    } else {
+      bgMusic.pause();
+      playIcon.style.display = "block";
+      pauseIcon.style.display = "none";
+      musicBtn.classList.remove("playing");
+      musicBtn.title = "Play Music";
+    }
+  });
+
   const tl = new TimelineMax();
 
   tl.to(".container", 0.1, {
@@ -46,7 +68,7 @@ const animationTimeline = () => {
         opacity: 0,
         y: 10,
       },
-      "+=2.5"
+      "+=2.5",
     )
     .to(
       ".two",
@@ -55,7 +77,7 @@ const animationTimeline = () => {
         opacity: 0,
         y: 10,
       },
-      "-=1"
+      "-=1",
     )
     .from(".three", 0.7, {
       opacity: 0,
@@ -69,7 +91,7 @@ const animationTimeline = () => {
         opacity: 0,
         y: 10,
       },
-      "+=2"
+      "+=2",
     )
     .from(".four", 0.7, {
       scale: 0.2,
@@ -85,7 +107,7 @@ const animationTimeline = () => {
       {
         visibility: "visible",
       },
-      0.05
+      0.05,
     )
     .to(".fake-btn", 0.1, {
       backgroundColor: "rgb(127, 206, 248)",
@@ -98,7 +120,7 @@ const animationTimeline = () => {
         opacity: 0,
         y: -150,
       },
-      "+=0.7"
+      "+=0.7",
     )
     .from(".idea-1", 0.7, ideaTextTrans)
     .to(".idea-1", 0.7, ideaTextTransLeave, "+=1.5")
@@ -108,7 +130,7 @@ const animationTimeline = () => {
     .to(".idea-3 strong", 0.5, {
       scale: 1.2,
       x: 10,
-      backgroundColor: "rgb(21, 161, 237)",
+      backgroundColor: "#ff1744",
       color: "#fff",
     })
     .to(".idea-3", 0.7, ideaTextTransLeave, "+=1.5")
@@ -125,7 +147,7 @@ const animationTimeline = () => {
         z: 10,
         opacity: 0,
       },
-      "+=0.5"
+      "+=0.5",
     )
     .to(
       ".idea-5 span",
@@ -134,7 +156,7 @@ const animationTimeline = () => {
         rotation: 90,
         x: 8,
       },
-      "+=0.4"
+      "+=0.4",
     )
     .to(
       ".idea-5",
@@ -143,7 +165,7 @@ const animationTimeline = () => {
         scale: 0.2,
         opacity: 0,
       },
-      "+=2"
+      "+=2",
     )
     .staggerFrom(
       ".idea-6 span",
@@ -154,7 +176,7 @@ const animationTimeline = () => {
         rotation: 15,
         ease: Expo.easeOut,
       },
-      0.2
+      0.2,
     )
     .staggerTo(
       ".idea-6 span",
@@ -166,7 +188,7 @@ const animationTimeline = () => {
         ease: Expo.easeOut,
       },
       0.2,
-      "+=1"
+      "+=1",
     )
     .staggerFromTo(
       ".baloons img",
@@ -179,7 +201,7 @@ const animationTimeline = () => {
         opacity: 1,
         y: -1000,
       },
-      0.2
+      0.2,
     )
     .from(
       ".girl-dp",
@@ -191,7 +213,7 @@ const animationTimeline = () => {
         y: -25,
         rotationZ: -45,
       },
-      "-=2"
+      "-=2",
     )
     .from(".hat", 0.5, {
       x: -100,
@@ -210,7 +232,7 @@ const animationTimeline = () => {
         skewX: "30deg",
         ease: Elastic.easeOut.config(1, 0.5),
       },
-      0.1
+      0.1,
     )
     .staggerFromTo(
       ".wish-hbd span",
@@ -226,7 +248,7 @@ const animationTimeline = () => {
         ease: Expo.easeOut,
       },
       0.1,
-      "party"
+      "party",
     )
     .from(
       ".wish h5",
@@ -236,7 +258,7 @@ const animationTimeline = () => {
         y: 10,
         skewX: "-15deg",
       },
-      "party"
+      "party",
     )
     .staggerTo(
       ".eight svg",
@@ -248,7 +270,7 @@ const animationTimeline = () => {
         repeat: 3,
         repeatDelay: 1.4,
       },
-      0.3
+      0.3,
     )
     .to(".six", 0.5, {
       opacity: 0,
@@ -262,7 +284,7 @@ const animationTimeline = () => {
       {
         rotation: 90,
       },
-      "+=1"
+      "+=1",
     );
 
   // tl.seek("currentStep");
